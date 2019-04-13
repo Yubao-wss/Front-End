@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS入门</title>
+		
+		<!--内部样式-->
+		<style type="text/css">
+/*css注释*/
+div{
+		font-size: 30px;
+		color: #0F0;
+	}
+</style>
+<!--
+	
+	CSS:Cacading Style Sheet:层叠样式表
+	  写css属性一定要按样式库规定的样式来写
+	  比如: 字体的样式:  
+	            CSS(properties):css(value) ;
+	             font-size:20px;
+	             font-color:red;
+	CSS的引入方式:
+	   A)行内样式(不推荐使用这种方式)
+	     在当前所在的标签中指定style属性 
+	       style="样式1:值1;..."
+	     弊端:1)CSS代码和html标签混合在一起,不利于后期管理
+	      2)一次只能控制一个标签
+	   
+	   B)内部样式(常用)
+	     需要在head标签体中定义一个style标签
+	     弊端:css代码和html标签都在一个页面上,所以不利于后期管理
+	     
+	   C)企业:前端人员: 外部样式
+	     1)创建一个独立以后缀名.css结尾的文件
+	     2)引入外部css文件
+	       在head标签体中定义一个link标签:引入外部css文件
+	          
+	        属性:href="01.css" 链接当前外部的资源文件
+	       rel="stylesheet" 关联层叠样式标签
+	        
+	     
+-->
+
+	
+<!--早期的写法:支持h5写法 type="text/css" 可以省略-->
+<link href="css/01.css" rel="stylesheet" />
+	</head>
+<body>
+<!--<div style="font-size: 26px;color: #00F;">div1</div>-->
+<div>div1</div>
+<div>div2</div>	
+<div>div3</div>	
+</body>
+</html>

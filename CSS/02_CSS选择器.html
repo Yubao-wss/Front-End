@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS选择器</title>
+<!--
+	CSS选择器:(使用前三种选择器居多)
+		element(元素/标签)选择器
+	       标签名称(元素){
+	       	
+	       	 CSs样式代码;
+	       }
+	        
+	    class(类)选择器:需要在标签中指定class属性,
+	    在同一html页面中,多个标签可以指定同名的class属性
+	    
+	    格式:
+	      .class属性值{
+	      	css样式代码;
+	      }
+	      class选择器的优先级高于标签选择器
+	   
+	    
+	    (推荐)id选择器: 在标签中指定id属性值,但是id必须唯一的
+	    在后面js:getElementById("id").value:获取表单中的用户信息
+	    前端考虑浏览器兼容问题:
+	       firefox ,google, IE/... :保证各个浏览器兼容,在前端页面布局,给标签
+	       中指定id属性:唯一的
+	    后端兼容:请求头类型:   content-type:必须在各个浏览器中指定相同的内容
+	   格式
+	   		#id属性值{
+	   			
+	   			css代码;
+	   		}
+	   		
+	   		常使用选择器的优先级:
+	   		  id选择器>class选择器>标签选择器
+	    
+	    
+	    
+	           并集选择器:选择器1,选择器2,选择器n{
+	           	css代码;
+	           }
+	           
+	          交集选择器(前端框架:Jquery: 子元素选择器)
+	          
+	         通配符选择器
+	   
+	   
+	       伪类选择器(单独讲)
+	    
+	
+-->
+<style>
+	/*元素/标签选择器*/
+	/*a{
+		color:#F00;
+		font-size:24px;
+	}*/
+	
+	/*class选择器*/
+	/*.a1{
+		font-size: 30px;
+		color: #0F0;
+	}*/
+	
+	/*id选择器*/
+	/*#a_id1{
+		font-size: 36px;
+		color: #000;
+	}*/
+	
+	/*并集选择器*/
+	/*#a_id1,.a1{
+		font-size: 26px;
+		color: #CCC;
+	}*/
+	
+	/*交集选择器: 称为:"子元素选择器"   selector1 selector2{}  */ 
+	/*#a_id1 span{
+		font-size:30px;
+		color: greenyellow;
+	}*/
+	
+	/*通配符选择器* */
+	*{
+		font-size: 36px;
+		color: pink;
+	}
+</style>
+	</head>
+<body>
+<a class="a1" id="a_id1" href="#">超链接1<span>span1</span></a><br />
+<a class="a1"  href="#">超链接2</a><br />
+<a href="#">超链接3</a>
+<span>span1</span>
+</body>
+</html>
