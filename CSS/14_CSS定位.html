@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS定位</title>
+<style>
+	/*统一设置边框以及容量大小*/
+	div{
+		width: 150px;
+		height: 150px;
+		border: 3px solid #000;
+	}
+	#d1{
+		background-color: #00F;
+		
+	}
+	#d2{
+		background-color: #F00;
+		
+	}
+	#d3{
+		background-color: #0F0;
+		/*绝对定位*/
+		/*position:absolute ;*/
+		/*相对定位*/
+		position: relative;
+		left: 20px;
+		top:20px;
+	}
+	
+	#adv{
+		width: 220px;
+		height: 220px;
+		border: 5px solide #00F;
+		/*设置定位*/
+		position: fixed;
+		left: 450px;
+		top: 250px;
+	}
+</style>
+<!--
+	cSS定位属性:
+			position:
+			            absolute:绝对定位:针对父元素进行移动
+						relative:相对定位:针对该元素原来的位置进行移动
+						fixed:固定定位:应用场景:咨询类的网站:弹框(不会随着滚动条滚动而发生变化)
+						
+			left: 向右移动...
+			toop:向下移动..	
+-->
+	</head>
+	<body>
+	
+<div id="d1">div1的内容</div>
+<div id="d2">div2的内容</div>
+<div id="d3">div3的内容</div>
+网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容
+网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div id="adv">
+	<input type="button" value="立刻咨询立刻咨询立刻咨询" />
+	<!--
+		当点击按钮之后,弹出广告页面,让用户广告5秒广告,在经过5秒广告自动隐藏
+		js
+	-->
+</div>
+	</body>
+</html>
