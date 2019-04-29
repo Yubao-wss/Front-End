@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js之for-in语句</title>
+<script>
+	/**
+	 * for-in语句，类似于java中的增强for循环语句
+	 * java：for(类型  变量：数组名称/对象名称（集合）){
+	 * 	
+	 *    输出变量。。。
+	 * }
+	 * java中增强for--->替代迭代器的Iterator
+	 * 
+	 * js中的for-in格式（自定义对象）
+	 * for(var 变量名 in 数组对象/自定义对象){
+	 * 	输出这个变量即可
+	 * }
+	 */
+//js中数组--->Array
+var arr = [10,20,30,40] ;
+//普通for循环的方式
+for(var i = 0 ; i < arr.length ; i ++){
+	document.write(arr[i]+"&nbsp;&nbsp;")
+}
+document.write("<hr/>") ;
+for(var i in arr){
+	document.write(arr[i]+"&nbsp;&nbsp;");
+}
+document.write("<hr/>") ;
+//自定义一个Person对象
+function Person(name,age){//this代表当前对象的地址在引用
+	this.name =name ;
+	this.age = age ;
+}
+//创建一个对象
+var p = new Person("eric",18) ;
+//将Person对象的属性遍历出来：for-in :对象名[变量]
+for(var i in p){
+	//输出对象的属性
+	document.write(p[i]+"<br/>") ;
+}
+
+//使用for-in语句
+</script>
+	</head>
+	<body>
+	</body>
+</html>

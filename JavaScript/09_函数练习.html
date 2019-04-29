@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数练习</title>
+		<script>
+			
+/**
+ * 需求：请键入月份，判断当前月多少天
+ *   大月：31天
+ *   小月：30天
+ *    2月：28天
+ */
+//定义一个函数
+function searchMonth(){
+	//获取id="month" 所在的input标签,并获取输入的内荣
+	var month = document.getElementById("month").value ;
+//	alert(month);
+//	document.write("数据类型是："+typeof(month));
+//使用选择结构语句：if,,else if ,else /switch（将表单的内容string--->number类型，在进行比较）
+//==：string---number,然后再进行比较
+if(month ==1 || month==3 || month==5|| month==7|| month==8 ||
+month ==10 || month==12){
+	alert("当前月份有31天。。。") ;
+}else if(month==4 || month ==6 || month==9||month==11){
+	alert("当前月份有30天。。。")
+}else if(month ==2){
+	alert("当前月份有28天。。。") ;
+}else{
+	alert("不存在该月份。。。");
+}
+
+
+}
+		</script>
+	</head>
+	<body>
+	
+请输入月份：<input type="text" id="month" />
+<input type="button" value="查询" onclick="searchMonth()" />
+	</body>
+</html>

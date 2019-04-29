@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网页时钟</title>
+<script>
+	function genDate(){
+		//创建date对象
+var date = new Date() ;
+//拼接时间字符串
+var dateStr = date.getFullYear()+"-"+(date.getMonth()+1)+"-"
++date.getDate()+"&nbsp;&nbsp;"+date.getHours()+"-"+date.getMinutes()+"-"+
+date.getSeconds() ;
+	
+//获取span标签对象
+var spanTip = document.getElementById("span_tip") ;
+//设置span标签对象的innerHTML属性
+spanTip.innerHTML = dateStr ;
+	}
+
+
+//定时器:网页定时器
+/**
+ * window.setTimeout("任务()",毫秒) ;//经过多少毫秒后执行一次任务
+ * window.setInterval("任务()",毫秒);//每经过多少毫秒重复执行任务
+ */
+window.setInterval("genDate()",1000) ;
+</script>
+	</head>
+	<body>
+当前系统时间是：<span id="span_tip"></span>
+	</body>
+</html>

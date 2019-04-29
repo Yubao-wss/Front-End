@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js的Array对象</title>
+<script>
+
+/**
+ * Array对象：
+ * 		1）js中，数组可以定义任何数据类型的元素！
+ * 		2)js中，定义数组，不用担心角标越界，不断的可以去扩大数组元素内容
+ * 关于数组创建有几种方式：
+ */
+//方式1:不指定数组长度
+/*var arr = new Array() ;
+alert(arr.length) ;
+arr[0] = "hello" ;
+arr[1] = true ;
+arr[2] = 'A' ;
+arr[3] = 10 ;
+arr[4] = 3.14 ;
+alert(arr.length) ;*/
+
+//方式2：指定长度
+/*var  arr = new Array(3) ;
+arr[0] = 10 ;
+arr[1] = 20 ;
+arr[2] = 30 ;
+arr[3] = "hello" ;*/
+
+//方式3：直接指定具体的元素内容
+var arr = ["hello",true ,'a',10,3.14,new Object()] ;
+alert(arr.length) 
+for(var i = 0 ; i <arr.length ;i++){
+	document.write(arr[i] +"&nbsp;") ;
+}
+document.write("<hr/>") ;
+
+//join（var str）:通过链接符号将数组的内容拼接起来----形式一个新的字符串
+//reverse（）：数组对象的反转功能
+var array = ["java","php","python","hadoop","r"];
+//var array =  array.join("-") ;
+//document.write(array) ;
+
+for(var i= 0 ; i< arr.length ; i++){
+	document.write(array[i] +"&nbsp;") ;
+}
+array = array.reverse() ;
+document.write("<hr/>")
+
+for(var i= 0 ; i< arr.length ; i++){
+	document.write(array[i] +"&nbsp;") ;
+}
+
+</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>with语句</title>
+		<!--
+			
+			在浏览器总输出：*形  5行
+			第一行一个*
+			第二行2格*
+			。。。。
+			。。。。
+		-->
+<script>
+	//for循环嵌套：  外层for控制行数：内存for控制列
+	for(var i= 0; i<5;i++){//行数
+		for(var j =0;j<=i;j++){//列数
+			document.write("*&nbsp;");
+		}
+		document.write("<br/>") ;
+	}
+	document.write("<hr/>") ;
+	
+/**
+ * with语句格式
+ * 		with(文档对象：document){
+ *           具体的逻辑；	
+ * 
+ * }
+ */
+with(document){
+	for(var i = 0 ; i <5; i++){
+		for(var j = 0 ; j<=i ;j++){
+			write("*&nbsp;") ;
+		}
+		write("<br/>") ;
+	}
+}
+</script>
+	</head>
+	<body>
+	</body>
+</html>

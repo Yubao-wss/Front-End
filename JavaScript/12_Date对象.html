@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Date对象</title>
+<script>
+/**
+ * java:Date日期格式----->日期的文本格式（String）2019/4/24
+ *     SimpleDateFormat（String pattern）
+ * Date date = new Date()
+ * Date对象：
+ * 
+ *    var定义Date对象
+ * 
+ * 
+ * 
+ */
+//创建日期对象
+var date = new Date() ;
+//document.write(date) ; 
+//方法：获取年份：getYear();
+//var year = date.getYear() ;
+//document.write(year+"年") ;
+//getFullYear():获取年份
+var year = date.getFullYear() ;
+document.write(year+"年") ;
+var month = date.getMonth() ;
+document.write((month+1)+"月") ;
+//获取月中的日期：getDate();
+document.write(date.getDate()+"日&nbsp;&nbsp;") ;
+document.write(date.getHours()+":") ;
+document.write(date.getMinutes()+":") ;
+document.write(date.getSeconds()) ;
+</script>
+	</head>
+	<body>
+	</body>
+</html>
